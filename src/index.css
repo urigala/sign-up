@@ -6,6 +6,8 @@
 }
 
 body {
+    width: 100%;
+    height: 100%;
     display: flex;
     background-color: rgb(246, 246, 246);
     align-items: center;
@@ -57,9 +59,8 @@ button {
 .sign-up-box {
     width: 350px;
     border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
     box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
-    margin: 100px 0;
+    margin-top: 100px;
     background-color: white;
 }
 
@@ -67,13 +68,12 @@ button {
     .sign-up-box {
         width: auto;
     }
-} 
+}  
 
 .sign-up-content {
     display: flex;
     flex-direction: column;
     padding: 25px;
-
 }
 
 .sign-up-form {
