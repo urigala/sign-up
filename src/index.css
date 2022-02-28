@@ -56,7 +56,7 @@ button {
     padding: 5px;
 }
 
-.sign-up-box {
+.sign-up-box, .confirm-box {
     width: 350px;
     border-radius: 10px;
     box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
@@ -68,9 +68,12 @@ button {
     .sign-up-box {
         width: auto;
     }
+    .confirm-box {
+        width: auto;
+    }
 }  
 
-.sign-up-content {
+.sign-up-content, .confirm-content {
     display: flex;
     flex-direction: column;
     padding: 25px;
@@ -95,4 +98,8 @@ button {
 
 .heading {
     font-size: 25px;
+}
+
+.confirm-email {
+    font-weight: bold;
 }
