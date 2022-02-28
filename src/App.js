@@ -5,6 +5,7 @@ function App() {
   const [signedUp, setSignedUp] = useState(false)
   const [firstName, setFirstName] = useState('')
   const [userEmail, setUserEmail] = useState('')
+  const [userPassword, setUserPassword] = useState('')
 
   const handleClick = (e) => {
     e.preventDefault()
@@ -15,6 +16,7 @@ function App() {
   const validateInput = () => {
     setFirstName(firstName.trim())
     setUserEmail(userEmail.trim())
+    setUserPassword(userPassword.trim())
   }
 
   if (signedUp) {
@@ -27,7 +29,7 @@ function App() {
     <div className="sign-up-box">
       <div className="sign-up-content" >
         <p className="heading">Let's <br/><span className="bolded-span">Sign Up</span> </p>
-        <p>Use this form to sign up for this super awesome service. You're only a few steps away!</p>
+        <p>Use the form below to sign up for this super awesome service. You're only a few steps away!</p>
         <form className="sign-up-form" onSubmit={handleClick}>
           <label>First Name</label>
           <input 
@@ -53,6 +55,9 @@ function App() {
           type="password" 
           minLength="6"
           maxLength="12"
+          name="userPassword"
+          value={userPassword}
+          onChange={(e) => setUserPassword(e.target.value)}
           ></input>
           <div className="btn-wrapper">
             <button type="submit">Sign Up</button>
