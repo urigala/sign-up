@@ -40,6 +40,11 @@ input {
     border-color: rgba(217, 216, 216, 0.615);
     display: flex;
     align-items: center;
+    padding-left: 5px;
+}
+
+input:focus + .btn-wrapper + .password-reqs {
+    display: flex;
 }
 
 button {
@@ -54,21 +59,23 @@ button {
     border: 2px;
     border-color: white;
     padding: 5px;
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+    font-size: small;
 }
 
 .sign-up-box, .confirm-box {
-    width: 350px;
+    width: 400px;
     border-radius: 10px;
     box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
     margin: 100px;
     background-color: white;
 }
-
-/* @media screen and (min-width: 320px) {
-    .sign-up-box {
-        width: 95vw;
-    }
-} */
 
 @media screen and (max-width: 450px) {
     .sign-up-box {
@@ -78,6 +85,10 @@ button {
     .confirm-box {
         width: 90vw;
         margin: 100px auto 100px;
+    }
+    input:focus + .btn-wrapper + .password-reqs {
+        display: flex;
+        flex-direction: column;
     }
 }  
 
@@ -97,6 +108,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin-bottom: 15px;
 }
 
 .bolded-span {
@@ -110,4 +122,27 @@ button {
 
 .confirm-email {
     font-weight: bold;
+}
+
+.password-reqs {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.toggle-password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.toggle-password input {
+    height: auto;
+    width: auto;
+    margin-bottom: 0;
+}
+.toggle-password label {
+    margin: 0;
 }
